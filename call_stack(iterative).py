@@ -9,6 +9,14 @@ def sum_to_one(n):
         n -= 1
         print(call_stack)
     print("BASE CASE REACHED")
+
+# This is where the separate values stored in the call stack are accumulated into a single return value.
+    while len(call_stack) != 0:
+        return_value = call_stack.pop()
+        print(
+            f"Return value of {return_value['n_value']} adding to result {result}")
+        result += return_value['n_value']
+
     return result, call_stack
 
 
