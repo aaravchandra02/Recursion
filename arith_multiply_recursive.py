@@ -47,3 +47,15 @@ This implementation isn’t quite as robust as the built-in operator. It won’t
 
 What is the big O runtime of our implementation?
 """
+
+
+def multiplication(n1, n2):
+    if n1 == 0 or n2 == 0:
+        return 0
+    return n1+multiplication(n1, n2-1)
+
+
+# test cases
+print(multiplication(3, 7) == 21)
+print(multiplication(5, 5) == 25)
+print(multiplication(0, 4) == 0)
