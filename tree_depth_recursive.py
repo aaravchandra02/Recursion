@@ -60,4 +60,24 @@ depth(two_level_tree)
 depth(four_level_tree)
 # 4
 This algorithm will visit each node in the tree once, which makes it a linear runtime, O(N), where N is the number of nodes in the tree.
+
+
+
+Implement your version of depth() which has the same functionality using recursive calls!
+
+
+Here’s our strategy:
+
+# function takes "tree_node" as input
+  # BASE CASE
+  # if tree_node is None
+    # return 0
+  # RECURSIVE STEP
+  # set left_depth to recursive call passing tree_node's left child
+  # set right_depth to recursive call passing tree_node's right child
+
+  # if left_depth is greater than right depth:
+    # return left_depth + 1
+  # else
+    # return right_depth + 1
 """
